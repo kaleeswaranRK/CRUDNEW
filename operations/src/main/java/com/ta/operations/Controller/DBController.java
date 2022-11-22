@@ -1,6 +1,5 @@
 package com.ta.operations.Controller;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -64,8 +63,8 @@ public class DBController {
 	@PostMapping("/test2")
 	public ResponseEntity<String> createDBModel(@RequestBody DBModel DBModel) {
 		try {
-			dbRepository.save(new DBModel(DBModel.getAgentCode(), DBModel.getAgentName(), DBModel.getWorkArea(),
-					DBModel.getPhoneNumber(), DBModel.getCountry()));
+			dbRepository.save(new DBModel(DBModel.getAgentCode(), DBModel.getAgentName(), DBModel.getworkingArea(),
+					DBModel.getphoneNo(), DBModel.getCountry()));
 			return new ResponseEntity<>("DBModel was created successfully.", HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -80,8 +79,8 @@ public class DBController {
 		if (Model != null) {
 			Model.setAgentCode(agentCode);
 			Model.setAgentName(DBModel.getAgentName());
-			Model.setWorkArea(DBModel.getWorkArea());
-			Model.setPhoneNumber(DBModel.getPhoneNumber());
+			Model.setworkingArea(DBModel.getworkingArea());
+			Model.setphoneNo(DBModel.getphoneNo());
 			Model.setCountry(DBModel.getCountry());
 			dbRepository.update(Model);
 			return new ResponseEntity<>("DBModel was updated successfully.", HttpStatus.OK);

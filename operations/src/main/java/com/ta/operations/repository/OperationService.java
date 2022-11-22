@@ -21,13 +21,13 @@ public class OperationService implements DBRepository {
   @Override
   public int save(DBModel DBModel) {
     return jdbcTemplate.update("INSERT INTO KALEESWARAN_AGENTS VALUES(?,?,?)",
-        new Object[] { DBModel.getAgentCode(), DBModel.getAgentName(), DBModel.getWorkArea(),DBModel.getPhoneNumber(),DBModel.getCountry() });
+        new Object[] { DBModel.getAgentCode(), DBModel.getAgentName(), DBModel.getworkingArea(),DBModel.getphoneNo(),DBModel.getCountry() });
   }
 
   @Override
   public int update(DBModel DBModel) {
     return jdbcTemplate.update("UPDATE KALEESWARAN_AGENTS SET AGENT_CODE=?,WORKING_AREA=?,PHONE_NO=?,COUNTRY=? WHERE AGENT_NAME=?",
-        new Object[] { DBModel.getAgentCode(), DBModel.getWorkArea(),DBModel.getPhoneNumber(),DBModel.getCountry(), DBModel.getAgentName() });
+        new Object[] { DBModel.getAgentCode(), DBModel.getworkingArea(),DBModel.getphoneNo(),DBModel.getCountry(), DBModel.getAgentName() });
   }
 
   @Override

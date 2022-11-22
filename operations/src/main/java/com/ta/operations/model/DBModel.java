@@ -4,8 +4,8 @@ public class DBModel {
 
 	private String agentCode;
 	private String agentName;
-	private String workArea;
-	private String phoneNumber;
+	private String workingArea;
+	private String phoneNo;
 	private String country;
 
 	public String getAgentCode() {
@@ -24,20 +24,20 @@ public class DBModel {
 		this.agentName = agentName;
 	}
 
-	public String getWorkArea() {
-		return workArea;
+	public String getworkingArea() {
+		return workingArea;
 	}
 
-	public void setWorkArea(String workArea) {
-		this.workArea = workArea;
+	public void setworkingArea(String workingArea) {
+		this.workingArea = workingArea;
 	}
 
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getphoneNo() {
+		return phoneNo;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setphoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 
 	public String getCountry() {
@@ -52,24 +52,24 @@ public class DBModel {
 
 	}
 
-	public DBModel(String agentCode, String agentName, String workArea, String phoneNumber,String country) {
+	public DBModel(String agentCode, String agentName, String workingArea, String phoneNo,String country) {
 		this.agentCode = agentCode;
 		this.agentName = agentName;
-		this.workArea = workArea;
-		this.phoneNumber = phoneNumber;
+		this.workingArea = workingArea;
+		this.phoneNo = phoneNo;
 		this.country = country;
 	}
 
-//	public DBModel(String agentCode, String agentName, String phoneNumber) {
+//	public DBModel(String agentCode, String agentName, String phoneNo) {
 //		this.agentCode = agentCode;
 //		this.agentName = agentName;
-//		this.phoneNumber = phoneNumber;
+//		this.phoneNo = phoneNo;
 //	}
 
 	@Override
 	public String toString() {
-		return "DBModel [AgentCode=" + agentCode + ", AgentName=" + agentName + ", WorkArea=" + workArea
-				+ ", PhoneNumber=" + phoneNumber + ", Country=" + country + "]";
+		return "DBModel [AgentCode=" + agentCode + ", AgentName=" + agentName + ", workingArea=" + workingArea
+				+ ", phoneNo=" + phoneNo + ", Country=" + country + "]";
 	}
 
 }
